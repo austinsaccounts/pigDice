@@ -5,23 +5,13 @@ var playerName1;
 var playerName2;
 var rollScore=0;
 var currentScore;
-var activePlayer=0;
+var currentPlayer=0;
 
 
 function rollDie() {
     var x = Math.floor((Math.random() * 6) + 1);
     return x;
 }
-
-function swap() {
-  if (activePlayer===1) {
-    activePlayer=2;
-  }
-  else {
-    activeplayer=1;
-  }
-  return activePlayer;
-};
 
 function scoreMe(currentRoll){
   for (var i = 0; i<currentRoll.length; i++)
@@ -30,20 +20,23 @@ function scoreMe(currentRoll){
   }
   else {
     currentScore = 0;
-    return currentScore;
     console.log("you should force pass action");
+    return parseInt(currentScore);
     break;
   }
-  return currentScore;
+  return parseInt(currentScore);
 }
 
 function Player(name) {
   this.name = name;
-  var score;
+  this.currentScore = 0;
+  this.score= 0;
 }
 
-Player.prototype.score = function() {
-  return this.name + ", " + this.score ;
+Player.prototype.pass = function(currentScore) {
+this.currentScore = parseInt(currentScore);
+this.score += this.currentScore;
+  console.log(this.name + " " + this.score );
 }
 
 
@@ -56,6 +49,8 @@ var rollingScore=0;
     event.preventDefault();
     var die = rollDie();
     var die2 = rollDie();
+    die = parseInt(die);
+    die2 = parseInt(die2);
     var currentRoll=[];
     currentRoll.push(die,die2);
     console.log(parseInt(scoreMe(currentRoll)));
@@ -64,8 +59,15 @@ var rollingScore=0;
 })
 $(".pass-button").click(function(event) {
 event.preventDefault();
-activePlayer = swap(activePlayer);
-console.log(activePlayer);
+
+if (currentPlayer === playerName2) {
+  currentPlayer=playerName1;
+} else
+  currentPlayer = playerName2;
+
+currentPlayer.pass(currentScore);
+currentScore=0;
+
 });
 
 
