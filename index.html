@@ -12,15 +12,30 @@
 <body>
   <h1>Welcome to Pig Die</h1>
 
+  <h2>Enter your Name</h2>
+
+  <form id=Name>
+  First name:<br>
+  <input id="playerName1" type="text" name="firstName"><br>
+  Second name:<br>
+  <input id="playerName2" type="text" name="firstName"><br>
+  <input type="submit">
+  </form>
+
+
   <h2 id="rolled"> </h2>
 
-  <h2 class="total score"></h2>
+  <h2 class="totalScore"></h2>
+
+  <h2 id="totalScoreDisplay" ></h2>
 
   <h2 class="runningscore"></h2>
 
-  <button type="button" id="roll-button">"Roll"</button>
-  <button type="button" id="pass-button">"Pass"</button>
+  <h2 id="runningScoreDisplay"> </h2>
 
+  <button type="button" id="roll-button">"Roll"</button>
+  <button type="button" class="pass-button" value="player1">"Pass"</button>
+  <button type="button" class="pass-button hidden" value="player2">"Pass2"</button>
 
 
 </body>
