@@ -23,7 +23,8 @@ The first player to score 100 or more points wins._
 * _Input: 3, 5 | Output: 8_
 * _Gives opportunity to roll again_
 * _Input: 3,5,6 | Output: 3,5,6_
-
+* _List of variables
+  currentPlayer
 
 ## Setup/Installation Requirements
 

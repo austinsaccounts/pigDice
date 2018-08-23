@@ -10,17 +10,40 @@
 </head>
 
 <body>
-  <h1>Welcome to Pig Die</h1>
-
-  <h2>Enter your Name</h2>
-
-  <form id=Name>
-  First name:<br>
-  <input id="playerName1" type="text" name="firstName"><br>
-  Second name:<br>
-  <input id="playerName2" type="text" name="firstName"><br>
-  <input type="submit">
-  </form>
+  <h1 class="jumbotron">Welcome to Pig Die</h1>
+  <div id="startUp">
+    <h2>Enter your Name</h2>
+    <form id="starting">
+    First name:<br>
+      <input id="firstPlayer" type="text" name="firstName"><br>
+      Second name:<br>
+      <input id="secondPlayer" type="text" name="firstName"><br>
+      <input type="submit">
+    </form>
+  </div>
+    <div class="container">
+      <div class="framework">
+        <div class="row row1">
+          <div class="col-md-3" id="scoreplayer1">scorePlayer1</div>
+          <div class="col-md-2" id="d1">d1</div>
+          <div class="col-md-2" id="d2">d2</div>
+          <div class="col-md-2" id="d3">d3</div>
+          <div class="col-md-3" id="scoreplayer2">scorePlayer2</div>
+        </div>
+        <div class="row row2">
+          <div class="col-md-3" id="tempPlayer1">tempPlayer1</div>
+          <div class="col-md-2" id="c7">c7</div>
+          <div class="col-md-2" id="c8">c8</div>
+          <div class="col-md-2" id="c9">c9</div>
+          <div class="col-md-3" id="tempPlayer2">tempPlayer2</div>
+        </div>
+        <div class="row row3">
+          <div class="col col-md-6" id="rollHolder">rollHolder</div>
+          <div class="col col-md-6" id="passHolder">passHolder</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <h2 id="rolled"> </h2>
@@ -33,10 +56,11 @@
 
   <h2 id="runningScoreDisplay"> </h2>
 
-  <button type="button" id="roll-button">"Roll"</button>
+<div class="hidden">
+  <button type="button" id="roll-button" >Roll</button>
   <button type="button" class="pass-button" value="player1">"Pass"</button>
   <button type="button" class="pass-button hidden" value="player2">"Pass2"</button>
-
+</div>
 
 </body>
 

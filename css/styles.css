@@ -1,3 +1,28 @@
 .hidden {
   display: none;
+  visibility: hidden;
+}
+
+body {
+  padding:15px;
+  background-color: #AD8D9A;
+}
+.jumbotron {
+  text-align: center;
+  background-color: pink;
+}
+#startUp {
+  display: block;
+  width: auto;
+  text-align: center;
+
+}
+.framework {
+  outline-style: double;
+  outline-color: green;
+  outline-width: thick;
+  height: 750px;
+}
+.row {
+  height: 40%;
 }
