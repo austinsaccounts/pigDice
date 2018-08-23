@@ -24,22 +24,22 @@
     <div class="container">
       <div class="framework">
         <div class="row row1">
-          <div class="col-md-3" id="scoreplayer1">scorePlayer1</div>
+          <div class="col-md-3"> <span id="playerName1"></span><br><span id="scorePlayer1"></span></div>
           <div class="col-md-2" id="d1">d1</div>
           <div class="col-md-2" id="d2">d2</div>
           <div class="col-md-2" id="d3">d3</div>
-          <div class="col-md-3" id="scoreplayer2">scorePlayer2</div>
+          <div class="col-md-3"> <span id="playerName2"></span><br><span id="scorePlayer2"></span></div>
         </div>
         <div class="row row2">
-          <div class="col-md-3" id="tempPlayer1">tempPlayer1</div>
+          <div class="col-md-3" id="tempPlayer1">scorePlayer2</div>
           <div class="col-md-2" id="c7">c7</div>
           <div class="col-md-2" id="c8">c8</div>
           <div class="col-md-2" id="c9">c9</div>
-          <div class="col-md-3" id="tempPlayer2">tempPlayer2</div>
+          <div class="col-md-3" ><p><span id="tempPlayer2"></p></span></div>
         </div>
         <div class="row row3">
-          <div class="col col-md-6" id="rollHolder">rollHolder</div>
-          <div class="col col-md-6" id="passHolder">passHolder</div>
+          <div class="col col-md-6" id="rollHolder"><button type="button" id="roll-button" >Roll</button></div>
+          <div class="col col-md-6" id="passHolder"><button type="button" class="pass-button" value="player1">"Pass"</button></div>
         </div>
       </div>
     </div>
@@ -56,11 +56,11 @@
 
   <h2 id="runningScoreDisplay"> </h2>
 
-<div class="hidden">
-  <button type="button" id="roll-button" >Roll</button>
-  <button type="button" class="pass-button" value="player1">"Pass"</button>
+
+
+
   <button type="button" class="pass-button hidden" value="player2">"Pass2"</button>
-</div>
+
 
 </body>
 
